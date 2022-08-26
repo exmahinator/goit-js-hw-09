@@ -86,10 +86,7 @@ function countdownToDate() {
       clearInterval(timerId);
       startBtnRef.disabled = false;
       document.getElementById('datetime-picker').disabled = false;
-      //   location.reload();
     }
-
-    console.log(timeLeft);
 
     daysToDate.textContent = addLeadingZero(timeLeft.days);
     hoursToDate.textContent = addLeadingZero(timeLeft.hours);
