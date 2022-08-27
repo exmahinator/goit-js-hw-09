@@ -30,9 +30,9 @@ function onInput(event) {
 
 function onSubmit(event) {
   event.preventDefault();
-  const { firstDelay, delay, position } = savedData;
-  for (let i = 0; i < position; i += 1) {
-    const timeToNext = firstDelay + delay * i;
+  const { delay, step, amount } = savedData;
+  for (let i = 0; i < amount; i += 1) {
+    const timeToNext = delay + step * i;
     createPromise(i + 1, timeToNext)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
